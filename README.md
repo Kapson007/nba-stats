@@ -1,4 +1,5 @@
 # nba-stats
+In this project it was used technologies such as:
 
 ## Project setup
 ```
