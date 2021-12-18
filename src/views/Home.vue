@@ -46,9 +46,11 @@ export default defineComponent({
 @import '../assets/variables.scss';
 
   .players{
+    position: relative;
+    left: 300px;
     display: block;
-    
     height: 500px;
+    width: 40vw;
     overflow-y: scroll;
     border: 2px solid $indigo;
     border-radius: 5px;
@@ -69,16 +71,24 @@ export default defineComponent({
     border-collapse: collapse;
     box-shadow: 0px 0px 10px $gray;
     
+    
     box-sizing: border-box;
     text-align: left;
     height: 200px;
     width: 100%;
-    
-  
 
+    .head{
+      position: fixed;
+      top: 105px;
+    }
 
     &__head{
-      box-shadow: 0px 5px 10px $blue;
+      display: flex;
+      justify-content: space-around;
+      width: 577px;
+      height: 55px;
+      background: $candy-pink;
+      border-radius: 5px;
       
     }
 
@@ -88,7 +98,7 @@ export default defineComponent({
       letter-spacing: .1rem;
       font-size: 1.9rem;
       font-weight: 700;
-      background: $candy-pink;
+      
       color: $gray;
     }
 
@@ -98,6 +108,7 @@ export default defineComponent({
         padding: 1rem 2rem;
         color: $white;
         font-weight: 500;
+        text-align: center;
 
       }
       &__info:nth-child(odd){
