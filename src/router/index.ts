@@ -1,5 +1,7 @@
+
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
+import PlayerStat from '../views/PlayerStat.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -7,7 +9,12 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Home',
     component: Home
   },
-  
+  {
+    path:'/:id',
+    name: 'PlayerStat',
+    component: PlayerStat,
+    props: true
+  }
 ]
 
 const router = createRouter({

@@ -9,9 +9,10 @@
               <th class="head__surname">Surname</th>
             </thead>
             <tbody class="players__body body">
+              
               <tr class="body__info player" v-for="player in players" :key="player.id">
-                <td class="body__data">{{player.first_name}}</td>
-                <td class="body__data">{{player.last_name}}</td>
+                <td class="body__data"><router-link :to="{name: 'PlayerStat', params: {id: player.id}}" >{{player.first_name}}</router-link></td>
+                <td class="body__data"><router-link :to="{name: 'PlayerStat', params: {id: player.id}}" >{{player.last_name}}</router-link></td>
               </tr>
             </tbody>
             
@@ -25,16 +26,17 @@
 import { defineComponent } from 'vue';
 import {getPlayers} from '../functions/getPlayers';
 import Title from '../components/Title.vue';
+import PlayerStat from '../views/PlayerStat.vue';
 
 export default defineComponent({
   name: 'Home',
   components: {
-    Title
+    Title, PlayerStat
   },
   setup() {
     const players = getPlayers(`https://www.balldontlie.io/api/v1/players`);
     console.log(players);
-
+    
     return {players}
   }
 
@@ -111,6 +113,11 @@ export default defineComponent({
         text-align: center;
 
       }
+
+      &__data:hover{
+        color: red;
+      }
+
       &__info:nth-child(odd){
         background: $blue;
       }
