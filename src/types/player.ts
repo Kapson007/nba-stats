@@ -1,3 +1,5 @@
+import {Team} from './team';
+
 interface Player {
     id: Number,
     first_name: String,
@@ -6,5 +8,7 @@ interface Player {
     height_feet: Number,
     height_inches: Number,
     weight_pounds: Number,
-    team: 
-}
+    team: Team
+};
+
+export {Player};
