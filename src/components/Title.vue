@@ -1,12 +1,20 @@
 <template>
-  <h1 class="title">NBA players stats by balldontlie.io</h1>
+  <h1 class="title">{{text}}</h1>
 </template>
 
 <script>
 import '../assets/variables.scss'
-export default {
+import { defineComponent, onMounted } from 'vue';
 
-}
+export default defineComponent({
+  name: 'Title',
+  components: {
+    
+  },
+  props: {
+    text: String
+  }
+});
 </script>
 
 <style lang="scss">

@@ -1,13 +1,13 @@
 import {Team} from './team';
 
 interface Player {
-    id: Number,
-    first_name: String,
-    last_name: String,
-    position: String,
-    height_feet: Number,
-    height_inches: Number,
-    weight_pounds: Number,
+    id: number,
+    first_name: string,
+    last_name: string,
+    position: string,
+    height_feet: number,
+    height_inches: number,
+    weight_pounds: number,
     team: Team
 };
 
