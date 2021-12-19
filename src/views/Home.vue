@@ -11,8 +11,8 @@
             <tbody class="players__body body">
               
               <tr class="body__info player" v-for="player in players" :key="player.id">
-                <td class="body__data" ><router-link :to="{name: 'PlayerStat', params: {id: player.id,name: player.first_name, surname: player.last_name}}" >{{player.first_name}}</router-link></td>
-                <td class="body__data"><router-link :to="{name: 'PlayerStat', params: {id: player.id,name: player.first_name, surname: player.last_name}}" >{{player.last_name}}</router-link></td>
+                <td class="body__data" ><router-link :to="{name: 'PlayerStat', params: {id: player.id,name: player.first_name, surname: player.last_name, club: player.team.full_name}}" >{{player.first_name}}</router-link></td>
+                <td class="body__data"><router-link :to="{name: 'PlayerStat', params: {id: player.id,name: player.first_name, surname: player.last_name, club: player.team.full_name}}" >{{player.last_name}}</router-link></td>
               </tr>
             </tbody>
             

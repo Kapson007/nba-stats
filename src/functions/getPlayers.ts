@@ -1,9 +1,10 @@
 import {ref} from 'vue';
 import { Player } from '@/types/player';
-const documents = ref<Player[]>([]);
+
 
 
 const getPlayers = (url : string) =>{
+    const documents = ref<Player[]>([]);
     fetch(url)
     .then(response => response.json())
     .then(resource => documents.value = resource.data)
